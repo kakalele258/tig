@@ -1,0 +1,55 @@
+# CMake build directories and generated files
+/build/
+/output/
+/auto_start
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+
+#参考资料
+/优秀开源示例
+/其他参考数据
+
+# Compiled artifacts
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# Runtime logs and temporary files
+/logs/
+/auto_start/
+*.log
+*.tmp
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Coverage and profiling output
+*.gcda
+*.gcno
+*.gcov
+gmon.out
+# ---- 本项目（本地补丁 / 仿真桥接）----
+*.orig
+/runtime/
+/datasets/
+/third_party/
+/docs/*.pdf
+/tools/daedalus_scene/daedalus_scene
