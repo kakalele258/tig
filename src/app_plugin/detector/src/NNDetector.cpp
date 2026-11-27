@@ -310,9 +310,13 @@ public:
         }
         if ((++m_log_counter % 20) == 0)
         {
+            std::string classes;
+            for (const auto &detection : detections)
+                classes += std::to_string(detection.class_id) + ":" + std::to_string(static_cast<int>(detection.confidence * 100)) + " ";
             LOG(INFO) << "[NNDetector] detections=" << detections.size()
                       << " roi=" << roi.width << 'x' << roi.height
-                      << " best=" << (detections.empty() ? 0.0F : detections.front().confidence);
+                      << " best=" << (detections.empty() ? 0.0F : detections.front().confidence)
+                      << " classes=[" << classes << "]";
         }
 
         if (!detections.empty() && detections.front().confidence >= 0.25F)
